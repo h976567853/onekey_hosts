@@ -30,7 +30,7 @@ def geturl():
     pattern2 = re.compile(u'<a href="Windows(.*?).zip">Windows系列跟苹果系列.zip</a>  ',re.S)
     str = re.findall(pattern2,getcontent(url2))
     result=url2+'/Windows'+str[0]+'.zip'
-    print('\n已经获取hosts')
+    print('\n已经获取hosts,版本:'+pagenum)
     time.sleep(0.5)
     return result
 
@@ -53,3 +53,5 @@ print('\nhost已经更新完成')
 #删除临时文件
 os.remove('temp.zip')
 os.remove('hosts')
+
+input ("\nPlease Press Enter To Exit")
